@@ -1,0 +1,69 @@
+// -------------------------------------
+// BaseKit Baseplate: CSS > Plugin: Blog
+// -------------------------------------
+
+
+.bk-blogpostlist {
+	text-align: center;
+}
+
+.post-image {
+	margin-bottom: 50px;
+}
+
+.post-content, .post-footer {
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.post-footer {
+	border-bottom: 3px solid darken(@color-swatch1, 8%);
+	padding-bottom: 40px;
+}
+
+.read-more {
+    padding: 9px 18px;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    display: inline-block;
+    margin: 1em 0;
+    .border-radius(3px);
+    &:hover {
+    	text-decoration: none;
+    	background-color: @font-swatch7-background-color-hover;
+    	color: @font-swatch7-color-hover;
+        .transition( all, 0.5s, ease );
+    }
+}
+
+.post-attributes {
+	border: 2px solid darken(@color-swatch1, 10%);
+	background-color: @color-swatch1;
+	padding: 1em;
+	margin: 2em 0;
+	display: inline-block;
+	float: left;
+}
+
+time.timestamp.blog-post__timestamp {
+	display: block;
+	width: 100%;
+	margin: 1em 0;
+}
+
+ul.sharing-links {
+	width: 100%;
+	display: inline-block;
+	.button:hover {
+		&.icon--twitter {
+			background-color: #4099FF;
+		}
+		&.icon--facebook {
+			background-color: #3b5998;
+		}
+		&.icon--googleplus {
+			background-color: #d34836;
+		}
+	}
+}
