@@ -176,17 +176,18 @@
         bottom: 20px;
         border: 1px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.15); 
     }
+    .background-image, .content-wrap {
+        min-height: 600px;
+    }
     .background-image {
         display: table;
         width: 100%;
-        min-height: 600px;
         background-size: cover;
     }
     .content-wrap {
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        min-height: 600px;
         background-color: hsla(hue(@color-swatch4), saturation(@color-swatch4), lightness(lighten(@color-swatch4,10%)), 0.1); 
         border: 20px solid hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(lighten(@color-swatch7,10%)), 0.1); 
         position: relative;
@@ -197,6 +198,41 @@
             &:hover {
                 border-bottom: 3px solid darken(@font-swatch7-background-color-hover, 8%);
                 background-color: @font-swatch7-background-color-hover;
+            }
+        }
+    }
+}
+
+@media @tablet {
+    .feature-widget {
+        .background-image, .content-wrap {
+            min-height: 400px;
+        }
+        .content-wrap {
+            .headline {
+                font-size: bkscale(@font-swatch8-font-size, 0.9);
+                line-height: bkscale(@font-swatch8-line-height, 0.9);
+            }
+            .strapline {
+                font-size: bkscale(@font-swatch9-font-size, 0.9);
+                line-height: bkscale(@font-swatch9-line-height, 0.9);
+            }
+        }
+    }
+}
+@media @mobile {
+    .feature-widget {
+        .background-image, .content-wrap {
+            min-height: 300px;
+        }
+        .content-wrap {
+            .headline {
+                font-size: bkscale(@font-swatch8-font-size, 0.7);
+                line-height: bkscale(@font-swatch8-line-height, 0.7);
+            }
+            .strapline {
+                font-size: bkscale(@font-swatch9-font-size, 0.8);
+                line-height: bkscale(@font-swatch9-line-height, 0.8);
             }
         }
     }
