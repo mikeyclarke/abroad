@@ -366,6 +366,12 @@
 .slideshow, .slideshow__figure {
     position: relative;
     min-height: 400px;
+    @media @tablet {
+        min-height: 300px;
+    }
+    @media @mobile {
+        min-height: 200px;
+    }
 }
 
 // Slideshow Images
@@ -389,16 +395,26 @@
     bottom: 0;
     width: auto;
     padding: 20px;
+    @media @tablet {
+        padding: 10px;
+    }
+    .image-title, .image-description {
+        color: @color-swatch4;
+        @media @tablet {
+            font-size: bkscale(@font-swatch5-font-size,0.9);
+            line-height: bkscale(@font-swatch9-line-height,0.9);
+        }
+        @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+            line-height: bkscale(@font-swatch9-line-height,0.8);
+        }
+    }
 }
 
 // Slideshow Navigation
 // --------------------
 
 .slide-navigation {
-    position: absolute;
-    top: 30%;
-    bottom: 0;
-    width: 100%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -427,26 +443,39 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    button {
-        color: @font-swatch6-color;
-        padding: 0px;
-        outline: 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-        &.previous-button, &.next-button {
-            background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.4); 
-            width: 30px;
-            height: 50%;
+    .button.icon:before, .button.icon:after {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    @media only screen and (min-width:480px) {
+        position: absolute;
+        top: 30%;
+        bottom: 0;
+        width: 100%;
+        button {
+            color: @font-swatch6-color;
+            padding: 0px;
+            outline: 0;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            &.previous-button, &.next-button {
+                background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.4); 
+                width: 30px;
+                height: 50%;
+            }
+            &.pause-toggle {
+                height: 50%;
+                background-color: transparent;
+            }
+            &:hover {
+                color: @font-swatch6-color-hover;
+                background-color: transparent;
+            }
         }
-        &.pause-toggle {
-            height: 50%;
-            background-color: transparent;
-        }
-        &:hover {
-            color: @font-swatch6-color-hover;
-            background-color: transparent;
-        }
+    }
+    @media only screen and (max-width:480px) {
+        margin: 20px 0;
     }
 }
 
