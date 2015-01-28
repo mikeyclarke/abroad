@@ -1,88 +1,93 @@
-// -------------------------------------
-// BaseKit Baseplate: CSS > Plugin: Menu
-// -------------------------------------
+// -------------------------------------------
+// BaseKit Standard Theme: LESS > Plugin: Menu
+// -------------------------------------------
+
 
 // Menu sections
+// -------------
 
-.menu-navigation {
-	border-top: 3px solid darken(@color-swatch1, 8%);
-	border-bottom: 3px solid darken(@color-swatch1, 8%);
-	text-align: center;
-	padding: 1em 0;
-	@media only screen and (max-width: 550px) {
-		padding: 0;
-	}
-}
 
-.menu-item {
-	border-bottom: 1px solid darken(@color-swatch1, 8%);
-	padding-bottom: 30px;
-}
-
-.menu-item-name {
-	color: @font-swatch6-color;
-	&:hover {
-		color: @font-swatch6-color-hover;
-		text-decoration: none;
-	}
-}
-
-.menu-navigation-list {
-	display: table;
-    width: 100%;
-    margin: 0;
-    .menu-navigation-item {
-		display: inline-block;
-		@media only screen and (max-width: 550px) {
-            width: 100%;
-            border-bottom: 1px solid darken(@color-swatch1,7%);
-            padding: 15px 0 10px 0;
-        }
-	    &:last-child {
-	        padding-right: 0;
-	        @media only screen and (max-width: 550px) {
-	            border-bottom: 1px solid darken(@color-swatch1,7%);
-	        }
-	    }
+.menusections-body {
+    border-top: 3px solid darken(@color-swatch1, 8%);
+    border-bottom: 3px solid darken(@color-swatch1, 8%);
+    text-align: center;
+    padding: 1em 0;
+    @media only screen and (max-width: 550px) {
+        padding: 0;
     }
 }
 
-//Menu
+.menusections-list {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.menusections-item {
+    display: inline-block;
+    padding-right: 20px;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        border-bottom: 1px solid darken(@color-swatch1,7%);
+        padding: 15px 0 10px 0;
+    }
+    &:last-child {
+        padding-right: 0;
+        @media only screen and (max-width: 550px) {
+            border-bottom: 1px solid darken(@color-swatch1,7%);
+        }
+    }
+}
+
+.menu-item-name {
+    color: @font-swatch6-color;
+    &:hover {
+        color: @font-swatch6-color-hover;
+        text-decoration: none;
+    }
+}
+
+
+
+
+// Menu
+// -------------
+
 
 .section-header {
-	margin: 0 0 2em;
-	padding: 2em 0;
-	text-align: center;
-	.section-title {
-		background-color: darken(@color-swatch1, 3%);
-		padding: 0.7em 1.5em;
-		display: inline-block;
-		border-bottom: 3px solid darken(@color-swatch1, 10%);
-		margin: 0.5em;
-	}
+    margin: 0 0 2em;
+    padding: 2em 0;
+    text-align: center;
+    .section-title {
+        background-color: darken(@color-swatch1, 3%);
+        padding: .7em 1.5em;
+        display: inline-block;
+        border-bottom: 3px solid darken(@color-swatch1, 10%);
+        margin: .5em;
+    }
 }
 
 .menu-section--subsection .section-header {
-	border-bottom: 1px solid darken(@color-swatch1, 8%);
+    border-bottom: 1px solid darken(@color-swatch1, 8%);
 }
 
 .menu-section--subsection .section-title {
-	background-color: transparent;
-	color: @color-swatch2;
-	padding: 0;
-	border-bottom: 0;
+    background-color: transparent;
+    color: @color-swatch2;
+    padding: 0;
+    border-bottom: 0;
 }
 
 // Item Image
 
 .item-image {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 // Item Price
 
 .item-price {
-	font-family: @font-swatch3-font-family;
+    font-family: @font-swatch3-font-family;
     color: @font-swatch3-color;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
@@ -93,32 +98,32 @@
 // Promoted Item
 
 .menu-item--featured {
-	border: 1px solid darken(@color-swatch1, 10%);
-	background-color: darken(@color-swatch1, 2%);
-	padding: 1.5em;
+    border: 1px solid darken(@color-swatch1, 10%);
+    background-color: darken(@color-swatch1, 2%);
+    padding: 1.5em;
 }
 
 // Promoted Subsection
 
 .menu-section--featured {
-	border: 1px solid darken(@color-swatch1, 10%);
-	background-color: darken(@color-swatch1, 2%);
-	padding: 1.5em;
+    border: 1px solid darken(@color-swatch1, 10%);
+    background-color: darken(@color-swatch1, 2%);
+    padding: 1.5em;
 }
 
 // Dietary icons
 
 .dietary-item.icon:not(.icon--not-spicy) {
-	&:before {
-		content: "\2713";
-		margin-right: 0;
-		color: @color-swatch2;
-	}
+    &:before {
+        content: "\2713";
+        margin-right: 0;
+        color: @color-swatch2;
+    }
 }
 
 // Section footer
 
 .menu__section-footer {
-	text-align: center;
-	margin-top: 20px;
+    text-align: center;
+    margin-top: 20px;
 }

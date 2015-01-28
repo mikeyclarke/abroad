@@ -1,13 +1,21 @@
 {
     "name": "abroad",
-    "thumbnail": "thumbnail.png",
     "widgetVersion":2,
+    "thumbnail": "thumbnail.png",
+    "screenshot": "thumbnail.png",
+    "templateType":"standard",
+    "pageTypes": ["home", "default"],
+    "tags": {
+        },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#1ab29f",
-            "color3":"#4e4e4e",
+            "color3":"#5A5959",
             "color4":"#333132",
             "color5":"#7e7f82",
             "color6":"#a8a7a7",
@@ -113,9 +121,9 @@
         },
         "font8": {
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
-            "font-size": "36px",
+            "font-size": "40px",
             "font-weight": "400",
-            "line-height": "46px",
+            "line-height": "50px",
             "color": "@color-swatch7",
             "letter-spacing": "inherit"
         },

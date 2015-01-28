@@ -2,39 +2,8 @@
 
 {% block content %}
 
-<!-- Container -->
-<div class="container">
+        <!-- Main Widet Zone -->
 
-	<!-- Page Content -->
-	<section class="template-content">
-
-		<!-- Template Widgets -->
-
-		{{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-
-		<div class="theme-header">
-			<div class="brand">
-				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-			</div>
-			{{widget('profile', 'strapline', { 'profileType':'strapline', 'strapline':'profile'})|raw}}
-		</div>
-
-		<!-- End Template Widgets -->
-
-		<!-- Main Widet Zone -->
-
-
-	   	{{zone('main')|raw}}
-
-		<div class="theme-footer">
-			{{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
-		</div>
-
-	</section>
-	<!-- End Page Content -->
-
-</div>
-<!-- End Container -->
+        {{zone('main')|raw}}
 
 {% endblock %}

@@ -1,11 +1,12 @@
-// --------------------------------
-// BaseKit Baseplate: CSS > Widgets
-// --------------------------------
+// --------------------------------------
+// BaseKit Standard Theme: LESS > Widgets
+// --------------------------------------
 
 
 // -----------------------------
 // #Table of Contents
 // -----------------------------
+
 
 //  1.   #LOGO
 //  2.   #COMPANY NAME
@@ -37,9 +38,10 @@
 // 1-2  #Logo & #Company Name
 // -----------------------------
 
+
 .brand {
     text-align: center;
-    margin: 0 0 0.5em;
+    margin: 0 0 .5em;
 }
 
 
@@ -49,11 +51,21 @@
 // 3.  #Navigation
 // -----------------------------
 
+
+// Navigation alignment
+
+.extendednavigation {
+    &.align-left { text-align: left; }
+    &.align-right { text-align: right; }
+    &.align-center { text-align: center; }
+}
+
 // Dropdown Menu - Folder Item Parent: Gives arrow
+
 .item-name--parent:after {
+    content: "";
     display: inline-block;
     vertical-align: middle;
-    content: "";
     margin-left: 4px;
     border: 5px solid transparent;
     border-top-color: @font-swatch6-color;
@@ -63,30 +75,29 @@
     border-top-color: @font-swatch6-color-hover;
 }
 
-.navigation-list {
-    &.align-left {
-    text-align: left;
-    }
-    &.align-right {
-    text-align: right;
-    }
-    &.align-center {
-    text-align: center;
-    }
-}
+// Selected nav item
 
-.navigation-item.selected .item-name {
-    color: @font-swatch6-color-hover;
-}
+.navigation-item.selected .item-name { color: @font-swatch6-color-hover; }
+
+// Folder
 
 .navigation-list--children {
     border: 1px solid darken(@color-swatch1, 7%);
+    // Padding for folder list and folder items on desktop
+    @media only screen and (min-width: 769px) {
+        padding: 7px 0;
+        .item-name {
+            padding: 7px 14px;
+        }
+    }
 }
 
 
 // Collapsible navigation
 // ----------------------
-// MISSING CLASS IN THE TOGGLE WHEN YOU CLICK ON IT. A SCRIPT FOR THE TOGGLE TO WORK HAS BEEN ADDED TO LAYOUT.TWIG
+// MISSING CLASS IN THE TOGGLE WHEN YOU CLICK ON IT.
+// A SCRIPT FOR THE TOGGLE TO WORK HAS BEEN ADDED TO LAYOUT.TWIG
+
 
 .navigation-toggle {
     display: none;
@@ -95,32 +106,32 @@
 @media @tablet {
     .navigation-toggle {
         display: block;
-        width: 100%;
-        background-color: darken(@color-swatch1, 7%);
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-        text-indent: 1000px;
         overflow: hidden;
+        width: 100%;
         height: 45px;
+        text-indent: 1000px;
         line-height: 0;
+        background-color: darken(@color-swatch1, 7%);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
         outline: 0;
-        &:hover {
-            background-color: @font-swatch6-color-hover;
-            .bar {
-                 background-color: darken(@color-swatch1, 7%);
-            }
-        }
         .bar { // Toggle Button Closed State
             width: 25px;
             height: 3px;
-            background-color: @font-swatch6-color-hover;
             margin: 0 auto 3px;
+            background-color: @font-swatch6-color-hover;
             .transition( all, 0.5s, ease );
-            &.three {
-                margin-bottom: 0;
-            }
-        }           
+        }
+        .bar.three {
+            margin-bottom: 0;
+        }
+    }
+    .navigation-toggle:hover {
+        background-color: @font-swatch6-color-hover;
+        .bar {
+             background-color: darken(@color-swatch1, 7%);
+        }
     }
     // Toggle Button Open State
     .open & {
@@ -152,7 +163,7 @@
         display: none;
         .open & {
             display: block;
-        } 
+        }
     }
     .navigation-item {
         width: 100%;
@@ -166,7 +177,7 @@
 // 4.  #Feature
 // -----------------------------
 
-.feature-widget {
+.feature {
     &:before {
         content: " ";
         position: absolute;
@@ -174,7 +185,10 @@
         left: 20px;
         right: 20px;
         bottom: 20px;
-        border: 1px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.15); 
+        border: 1px solid hsla(hue(@color-swatch1),
+                               saturation(@color-swatch1),
+                               lightness(lighten(@color-swatch1,10%)),
+                               0.15);
     }
     .background-image, .content-wrap {
         min-height: 600px;
@@ -185,55 +199,79 @@
         background-size: cover;
     }
     .content-wrap {
+        position: relative;
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: hsla(hue(@color-swatch4), saturation(@color-swatch4), lightness(lighten(@color-swatch4,10%)), 0.1); 
-        border: 20px solid hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(lighten(@color-swatch7,10%)), 0.1); 
-        position: relative;
-        .button {
-            margin: 1em 0;
-            border-bottom: 3px solid darken(@font-swatch7-background-color, 10%);
-            background-color: darken(@font-swatch7-background-color, 4%);
-            &:hover {
-                border-bottom: 3px solid darken(@font-swatch7-background-color-hover, 8%);
-                background-color: @font-swatch7-background-color-hover;
-            }
+        background-color: hsla(hue(@color-swatch4),
+                               saturation(@color-swatch4),
+                               lightness(lighten(@color-swatch4,10%)),
+                               .2);
+        border: 20px solid hsla(hue(@color-swatch7),
+                                saturation(@color-swatch7),
+                                lightness(lighten(@color-swatch7,10%)),
+                                .1);
+    }
+    .headline {
+        font-family: @font-swatch8-font-family;
+        color: @font-swatch8-color;
+        font-size: @font-swatch8-font-size;
+        font-weight: @font-swatch8-font-weight;
+        line-height: @font-swatch8-line-height;
+    }
+    .strapline {
+        font-family: @font-swatch9-font-family;
+        color: @font-swatch9-color;
+        font-size: @font-swatch9-font-size;
+        font-weight: @font-swatch9-font-weight;
+        line-height: @font-swatch9-line-height;
+    }
+    .button {
+        margin: 1em 0;
+        border-bottom: 3px solid darken(@font-swatch7-background-color-hover, 10%);
+        background-color: darken(@font-swatch7-background-color-hover, 4%);
+    }
+    .button:hover {
+        border-bottom: 3px solid darken(@font-swatch7-background-color, 8%);
+        background-color: @font-swatch7-background-color;
+    }
+}
+
+// Feature Image and Text Size on Tablet
+@media @tablet {
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 350px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .8);
+            line-height: bkscale(@font-swatch8-line-height, .8);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .9);
+            line-height: bkscale(@font-swatch9-line-height, .9);
         }
     }
 }
 
-@media @tablet {
-    .feature-widget {
-        .background-image, .content-wrap {
-            min-height: 400px;
-        }
-        .content-wrap {
-            .headline {
-                font-size: bkscale(@font-swatch8-font-size, 0.9);
-                line-height: bkscale(@font-swatch8-line-height, 0.9);
-            }
-            .strapline {
-                font-size: bkscale(@font-swatch9-font-size, 0.9);
-                line-height: bkscale(@font-swatch9-line-height, 0.9);
-            }
-        }
-    }
-}
+// Feature Image and Text Size on Mobile
 @media @mobile {
-    .feature-widget {
-        .background-image, .content-wrap {
-            min-height: 300px;
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 250px;
         }
         .content-wrap {
-            .headline {
-                font-size: bkscale(@font-swatch8-font-size, 0.7);
-                line-height: bkscale(@font-swatch8-line-height, 0.7);
-            }
-            .strapline {
-                font-size: bkscale(@font-swatch9-font-size, 0.8);
-                line-height: bkscale(@font-swatch9-line-height, 0.8);
-            }
+            padding: 15px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .6);
+            line-height: bkscale(@font-swatch8-line-height, .6);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .8);
+            line-height: bkscale(@font-swatch9-line-height, .8);
         }
     }
 }
@@ -244,6 +282,7 @@
 // -----------------------------
 // 5.  #Images
 // -----------------------------
+
 
 // Image Captions
 // --------------
@@ -266,14 +305,16 @@
 // 6.  #Gallery
 // -----------------------------
 
+
 // The following styles give you a three column gallery layout with a
 // coloured overlay
+
 
 // Gallery Layout
 // --------------
 
 // Gallery List
-.image-gallery__gallery-list {
+.gallery-list {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -286,11 +327,11 @@
     -moz-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 // Gallery Item
-.image-gallery__gallery-item {
+.gallery__gallery-item {
     position: relative;
     width: 32%;
     margin-bottom: 2%;
@@ -306,7 +347,7 @@
 // --------------
 
 // Use Background-image Method
-.image-gallery__image-link {
+.gallery__image-link {
     display: block;
     height: 280px;
     background-repeat: no-repeat;
@@ -318,33 +359,29 @@
 }
 
 // Hide Img Element
-.image-gallery__image {
-    display: none;
-}
+.gallery__image { display: none; }
 
 
 // Gallery Image Captions
 // ----------------------
 
 // Hide Caption
-.image-gallery__caption {
+.gallery__caption {
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.8); 
+    background-color: hsla(hue(@color-swatch1),
+                           saturation(@color-swatch1),
+                           lightness(@color-swatch1), 0.8);
     border: 1px solid darken(@color-swatch1, 5%);
 }
 
-.image-title {
-    color: @color-swatch4;
-}
+.gallery__image-title { color: @color-swatch4; }
 
-.image-description {
-    color: @color-swatch5;
-}
+.gallery__image-description { color: @color-swatch5; }
 
 // Show Caption
-.image-link:hover .image-gallery__caption {
+.gallery__figure:hover .gallery__caption {
     position: absolute;
     top: 0;
     display: block;
@@ -359,11 +396,13 @@
 // 7.  #Slideshow
 // -----------------------------
 
+
 // Slideshow Layout
 // ----------------
 
 // Slideshow Height
-.slideshow, .slideshow__figure {
+.slides-list,
+.responsiveslideshow__figure {
     position: relative;
     min-height: 400px;
     @media @tablet {
@@ -378,19 +417,17 @@
 // ----------------
 
 // Use Background-image Method
-.slideshow__figure {
+.responsiveslideshow__figure {
     background-size: cover;
     background-position: center;
 }
 // Hide Img Element
-.slideshow__image {
-    display: none;
-}
+.responsiveslideshow__image { display: none; }
 
 // Slideshow Image Captions
 // ------------------------
 
-.slideshow__caption {
+.responsiveslideshow__caption {
     position: absolute;
     bottom: 0;
     width: auto;
@@ -398,7 +435,8 @@
     @media @tablet {
         padding: 10px;
     }
-    .image-title, .image-description {
+    .image-title,
+    .image-description {
         color: @color-swatch4;
         @media @tablet {
             font-size: bkscale(@font-swatch5-font-size,0.9);
@@ -443,55 +481,78 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    .button.icon:before, .button.icon:after {
+    .button.icon:before,
+    .button.icon:after {
         margin-right: 0;
         margin-left: 0;
     }
-    @media only screen and (min-width:480px) {
+    // Removes button text
+    .control-text {
+        display: none;
+    }
+}
+
+// Slideshow Navigation for Tablet and Desktop
+@media only screen and (min-width:480px) {
+    .slide-navigation {
         position: absolute;
         top: 30%;
         bottom: 0;
         width: 100%;
-        button {
+        .button {
             color: @font-swatch6-color;
-            padding: 0px;
+            padding: 0;
             outline: 0;
-            -webkit-border-radius: 0px;
-            -moz-border-radius: 0px;
-            border-radius: 0px;
-            &.previous-button, &.next-button {
-                background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.4); 
-                width: 30px;
-                height: 50%;
-            }
-            &.pause-toggle {
-                height: 50%;
-                background-color: transparent;
-            }
-            &:hover {
-                color: @font-swatch6-color-hover;
-                background-color: transparent;
-            }
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .button:hover {
+            color: @font-swatch6-color-hover;
+            background-color: transparent;
+        }
+        .previous-button,
+        .next-button {
+            width: 30px;
+            height: 50%;
+            background-color: hsla(hue(@color-swatch1),
+                                   saturation(@color-swatch1),
+                                   lightness(@color-swatch1), 0.4);
+        }
+        .pause-toggle {
+            height: 50%;
+            background-color: transparent;
         }
     }
-    @media only screen and (max-width:480px) {
+}
+
+// Slideshow Navigation for Mobile
+@media only screen and (max-width:480px) {
+    .slide-navigation {
         margin: 20px 0;
     }
 }
 
-// Removes button text
-.slideshow__control-text {
-    display: none;
-}
 
-// Pagination
-// ----------
+// Slideshow Pagination
+// --------------------
 
-.pagination-list {
+.slide-pagination .pagination-list {
+    margin-top: 20px;
     text-align: center;
-    button {
-        padding: 4px;
+    display: inline-block;
+    width: 100%;
+    .pagination-item {
         margin: 0 2px;
+        display: inline-block;
+    }
+    .button {
+        padding: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 8px;
+        height: 8px;
+        box-shadow: none;
     }
     .pagination-item.selected .button {
         background-color: @color-swatch4;
@@ -533,39 +594,67 @@ button,
 // 10.  #Signup Form & #Blog Search
 // --------------------------------
 
+
 // Global form styles are set in 'less > theme.less' (4. #Forms)
 
-.signup-form, .bk-blogsearch {
-    form,
-    .form {
-        .button {
-            height: 44px;
-        }
-        @media only screen and (min-width: 469px) {
-            .form-group {
-                margin-bottom: 5px;
-            }
-            input.input {
-                width: 80%;
-                float: left;
-                height: 45px;
-            }
-            .button {
-                display: inline-block;
-                vertical-align: top;
-                -webkit-border-radius: 0 3px 3px 0;
-                -moz-border-radius: 0 3px 3px 0;
-                border-radius: 0 3px 3px 0;
-            }
-        }
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+
+    .signupform__form-body,
+    .blogsearch__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
     }
+
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .button--submit.blogsearch__input,
+    .button--submit.signupform__input {
+        height: 44px;
+        padding: 0 18px;
+        margin-left: -2px;
+        -webkit-border-radius: 0 3px 3px 0;
+           -moz-border-radius: 0 3px 3px 0;
+                border-radius: 0 3px 3px 0;
+    }
+
 }
 
-.bk-blogsearch form.form input.input {
-    @media only screen and (max-width : 540px) and (min-width : 469px) {
-        width: 70%;
-    }
-}
 
 
 
@@ -616,6 +705,22 @@ button,
     p {
         padding-bottom: 0;
     }
+    .avatar {
+        max-width: 17%;
+        margin-right: 2%;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar, .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
     .account-link {
         font-family: @font-swatch5-font-family;
         color: @color-swatch2;
@@ -629,15 +734,6 @@ button,
             color: lighten(@color-swatch5, 15%)
         }
     }
-    @media only screen and (min-width: 481px) {
-        .avatar {
-            margin-right: 8px;
-        }
-        .avatar, .tweet-wrap {
-            display: inline-block;
-            vertical-align: top;
-        }
-    }
 }
 
 
@@ -647,7 +743,7 @@ button,
 // 13.  #Divider (Keyline)
 // -----------------------------
 
-hr.rule {
+.line__rule {
     height: 3px;
     background-color: darken(@color-swatch1, 8%);
 }
@@ -659,7 +755,7 @@ hr.rule {
 // 14. #Profile
 // -----------------------------
 
-.bk-profile {
+.profile {
     text-align: center;
     @media only screen and (min-width: 678px) {
         padding: 0 8em 0;
@@ -671,16 +767,32 @@ hr.rule {
         font-weight: @font-swatch5-font-weight;
         line-height: @font-swatch5-line-height;
     }
-    .twitter-feed .message {
-        background-color: @color-swatch1;
+    // Twitter
+    .tweet-item {
         padding: 0;
         padding-left: 0;
         margin: 0 auto;
+        background-color: @color-swatch1;
+        border: none;
+        max-width: 100%;
+    }
+    .avatar-image { display: none; }
+    // Signup Form
+    .signupform {
+        // Label for tablet and desktop
+        @media only screen and (min-width: 481px) {
+            .label { float: left; }
+        }
+        // Input text align for mobile
+        @media @mobile {
+            .form input[type="email"] { text-align: center; }
+        }
     }
 }
 
+// Phone number for tablet and desktop styled as normal paragraph text
 @media only screen and (min-width: 481px) {
-    .bk-profile a.phone-number-link {
+    .profile a.phone-number-link {
         color: @color-swatch5;
         &:hover {
             text-decoration: none;
@@ -688,5 +800,4 @@ hr.rule {
         }
     }
 }
-
 

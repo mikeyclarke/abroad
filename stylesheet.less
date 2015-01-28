@@ -1,10 +1,12 @@
-// --------------------------------
-// BaseKit Baseplate Template (v1.0)
-// --------------------------------
+// ----------------------------------
+// BaseKit Standard Theme: Stylesheet
+// ----------------------------------
+
 
 // -----------------------------
 // #Table of Contents
 // -----------------------------
+
 
 // 1. #LESS INCLUDES
 // 2. #PAGE SETTINGS
@@ -16,6 +18,7 @@
 // -----------------------------
 // 1. #LESS Includes
 // -----------------------------
+
 
 @import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
 
@@ -35,27 +38,30 @@
 
 
 // -----------------------------
-// 2. #Page Settings **
+// 2. #Page Settings
 // -----------------------------
+
 
 // Page Container
 // --------------
+
 
 .container {
     width: 90%;
     margin: 0 5%;
     @media only screen and (min-width: 1140px) {
-    	width: 960px; // 1140px - 10% for margins
-		margin: 0 auto;
-	}
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
 }
 
 
 
 
 // -----------------------------
-// Mixins
+// 3. #Mixins
 // -----------------------------
+
 
 .border-radius (@radius: 3px) {
     -webkit-border-radius: @radius;
@@ -64,9 +70,9 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-    -webkit-transition: @prop @time @ease;  
+    -webkit-transition: @prop @time @ease;
     -moz-transition:    @prop @time @ease;
-    -ms-transition:     @prop @time @ease; 
-    -o-transition:      @prop @time @ease;  
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
     transition:         @prop @time @ease;
 }

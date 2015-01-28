@@ -2,47 +2,21 @@
 
 {% block content %}
 
-<!-- Container -->
-<div class="container">
+        <!-- Theme Feature Widget -->
 
-	<!-- Page Content -->
-	<section class="template-content">
+        {{widget('feature', 'featurehome', {
+            "header": "profile",
+            "defaultBgImg": asset('images/feature-bg.jpg'),
+            'positionTopPercentage': '0',
+            'showBtn': false,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
 
-		<!-- Template Widgets -->
+        <!-- Main Widget Zone -->
 
-		{{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-
-		<div class="theme-header">
-			<div class="brand">
-				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-			</div>
-			{{widget('profile', 'strapline', { 'profileType':'strapline', 'strapline':'profile'})|raw}}
-		</div>
-		
-		{{widget('feature', 'featurehome', {
-			"header": "profile",
-			"defaultBgImg": asset('images/feature-bg.jpg'),
-			'positionTopPercentage': '0',
-			'showBtn': true,
-			buttonText: "Lorem Ipsum"
-		})|raw}}
-
-		<!-- End Template Widgets -->
-
-		<!-- Main Widet Zone -->
-
-
-	   	{{zone('main')|raw}}
-
-		<div class="theme-footer">
-			{{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
-		</div>
-
-	</section>
-	<!-- End Page Content -->
-
-</div>
-<!-- End Container -->
+        {{zone('main')|raw}}
 
 {% endblock %}
+
+
+
