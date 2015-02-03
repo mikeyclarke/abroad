@@ -603,85 +603,85 @@ button,
 
 
 // Style for tablet and desktop
-@media only screen and (min-width : 480px) {
-    .column {
-        .signupform__form-body,
-        .blogsearch__form-body {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-direction: normal;
-            -moz-box-direction: normal;
-            -webkit-box-orient: horizontal;
-            -moz-box-orient: horizontal;
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-            -webkit-box-pack: justify;
-            -moz-box-pack: justify;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-align-content: stretch;
-            -ms-flex-line-pack: stretch;
-            align-content: stretch;
-            -webkit-box-align: end;
-            -moz-box-align: end;
-            -webkit-align-items: flex-end;
-            -ms-flex-align: end;
-            align-items: flex-end;
-        }
+@media only screen and (min-width : 768px) {
+    .signupform__form-body,
+    .blogsearch__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
 
-        .signupform__form-group:first-child,
-        .blogsearch__form-group:first-child {
-            -ms-flex: 0 11 100%;
-            -webkit-flex: 0 11 100%;
-            flex: 0 11 100%;
-            -webkit-align-self: auto;
-            -ms-flex-item-align: auto;
-            align-self: auto;
-        }
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
 
-        .button--submit.blogsearch__input,
-        .button--submit.signupform__input {
-            height: 44px;
-            padding: 0 18px;
-            margin-left: -2px;
-            -webkit-border-radius: 0 3px 3px 0;
-               -moz-border-radius: 0 3px 3px 0;
-                    border-radius: 0 3px 3px 0;
-        }
+    .button--submit.blogsearch__input,
+    .button--submit.signupform__input {
+        height: 44px;
+        padding: 0 18px;
+        margin-left: -2px;
+        -webkit-border-radius: 0 3px 3px 0;
+           -moz-border-radius: 0 3px 3px 0;
+                border-radius: 0 3px 3px 0;
     }
 }
 
 // Responsive Columns
 // ------------------
 
-// Two Columns
-.columns-two-left,
-.columns-two-right {
-
-}
-
-
 // Three Columns
 .columns-three-left,
 .columns-three-middle,
-.columns-three-right {
-
-}
-
+.columns-three-right,
 // Four Columns
 .columns-four-first,
 .columns-four-second,
 .columns-four-third,
 .columns-four-fourth {
-
+    legend {
+        padding: 20px 30px;
+    }
+    .signupform__form-body,
+    .blogsearch__form-body {
+        display: block;
+        padding: 20px 30px;
+    }
+    .button--submit.blogsearch__input,
+    .button--submit.signupform__input {
+        margin-left: 0;
+        .border-radius(3px);
+    }
 }
 
 
