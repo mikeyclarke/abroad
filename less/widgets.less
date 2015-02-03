@@ -96,6 +96,8 @@
 
 .navigation-list--children {
     border: 1px solid darken(@color-swatch1, 7%);
+    white-space: normal;
+    width: auto;
     // Padding for folder list and folder items on desktop
     @media only screen and (min-width: 769px) {
         padding: 7px 0;
@@ -445,12 +447,12 @@
     bottom: 0;
     width: auto;
     padding: 20px;
+    background-color: none;
     @media @tablet {
         padding: 10px;
     }
     .image-title,
     .image-description {
-        color: @color-swatch4;
         @media @tablet {
             font-size: bkscale(@font-swatch5-font-size,0.9);
             line-height: bkscale(@font-swatch9-line-height,0.9);
@@ -680,11 +682,17 @@ button,
 .columns-four-fourth {
     legend {
         padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
     }
     .signupform__form-body,
     .blogsearch__form-body {
         display: block;
         padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
     }
     .button--submit.blogsearch__input,
     .button--submit.signupform__input {
