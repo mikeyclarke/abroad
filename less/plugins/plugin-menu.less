@@ -8,10 +8,9 @@
 
 
 .menusections-body {
-    border-top: 3px solid darken(@color-swatch1, 8%);
     border-bottom: 3px solid darken(@color-swatch1, 8%);
     text-align: center;
-    padding: 1em 0;
+    padding: 0 0 2em;
     @media only screen and (max-width: 550px) {
         padding: 0;
     }
@@ -53,7 +52,6 @@
 // Menu
 // -------------
 
-
 .section-header {
     margin: 0 0 2em;
     padding: 2em 0;
@@ -67,8 +65,12 @@
     }
 }
 
-.menu-section--subsection .section-header {
-    border-bottom: 1px solid darken(@color-swatch1, 8%);
+.section-subtitle {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
 }
 
 .menu-section--subsection .section-title {
@@ -109,6 +111,9 @@
     border: 1px solid darken(@color-swatch1, 10%);
     background-color: darken(@color-swatch1, 2%);
     padding: 1.5em;
+    .section-header {
+        border-bottom: 1px solid darken(@color-swatch1, 8%);
+    }
 }
 
 // Dietary icons
