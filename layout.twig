@@ -16,7 +16,7 @@
         {% include basekit.headScript %}
     </head>
 
-    <body class="{{ page.backgroundClass }}">
+    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
         <!-- Container -->
 
