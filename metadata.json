@@ -107,7 +107,9 @@
             "line-height": "inherit",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
          },
         "font7": {
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
