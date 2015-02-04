@@ -2,7 +2,7 @@
 // BaseKit Standard Theme: LESS > Plugin: Blog
 // -------------------------------------------
 
-
+// ----------
 // Posts List
 // ----------
 
@@ -12,31 +12,39 @@
 }
 
 // Read More Button
+
 .read-more {
     display: inline-block;
     margin: 1em 0;
     padding: 9px 18px;
-    background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
+    background-color: @font-swatch7-background-color;
     .border-radius(3px);
     &:hover {
         text-decoration: none;
-        background-color: @font-swatch7-background-color-hover;
         color: @font-swatch7-color-hover;
+        background-color: @font-swatch7-background-color-hover;
         .transition( all, 0.5s, ease );
     }
 }
 
 // Return to Blog Link
+
 .blog-home-link {
     display: inline-block;
     margin: 30px 0 40px;
 }
 
+
+
+
+// ------------------------
 // Posts list & Single Post
 // ------------------------
 
+
 // Images
+
 .post-image {
     display: inline-block;
     width: 100%;
@@ -56,41 +64,48 @@
 
 .post-content,
 .post-footer {
-    max-width: 600px;
     width: auto;
+    max-width: 600px;
     margin: 0 auto;
     text-align: left;
 }
 
 .post-footer {
-    border-bottom: 3px solid darken(@color-swatch1, 8%);
     padding: 10px 0 40px;
+    border-bottom: 3px solid darken(@color-swatch1, 8%);
 }
 
+
+
+
+// -----------
 // Single Post
 // -----------
 
+
 // Post Title
+
 .blogpost__post-title {
     padding: 10px 0 30px;
 }
 
-
 // Date
+
 time.timestamp.blogpost__timestamp {
     display: inline-block;
-    width: 100%;
     margin: 2em 0 0;
+    width: 100%;
 }
 
 // Categories and Tags
+
 .post-attributes {
     display: inline-block;
+    width: 100%;
     padding: 1em;
     margin: 2em 0;
-    width: 100%;
-    border: 2px solid darken(@color-swatch1, 10%);
     background-color: @color-swatch1;
+    border: 2px solid darken(@color-swatch1, 10%);
     .category-title,
     .tags-title {
         display: inline-block;
@@ -98,6 +113,7 @@ time.timestamp.blogpost__timestamp {
 }
 
 // Sharing buttons
+
 .sharing-links {
 
     // Tablet and Desktop
@@ -148,8 +164,8 @@ time.timestamp.blogpost__timestamp {
         width: 100%;
     }
     .button {
-        margin-bottom: 20px;
         padding: 9px 5px;
+        margin-bottom: 20px;
         font-size: bkscale(@font-swatch7-font-size, 0.9);
         line-height: bkscale(@font-swatch7-line-height, 0.9);
     }
@@ -166,4 +182,5 @@ time.timestamp.blogpost__timestamp {
             background-color: #d34836;
         }
     }
+
 }

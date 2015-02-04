@@ -105,44 +105,48 @@
 // -----------------------------
 
 // Global style
+form,
 .form {
     margin-bottom: 1em;
-    .border-radius(3px);
     background-color: darken(@color-swatch1, 3%);
-    legend {
-        width: 100%;
-        padding: 20px 40px;
-        background-color: darken(@color-swatch1, 6%);
-        -webkit-border-radius: 3px 3px 0 0;
-           -moz-border-radius: 3px 3px 0 0;
-                border-radius: 3px 3px 0 0;
-        font-family: @font-swatch3-font-family;
-        font-size: bkscale(@font-swatch3-font-size,0.9);
-        line-height: bkscale(@font-swatch3-line-height,0.9);
-        font-weight: 700;
-        color: @font-swatch5-color;
-        @media @mobile {
-            padding: 20px;
-        }
-    }
-    .form-body {
-        padding: 20px 40px 30px;
-        @media @mobile {
-            padding: 20px;
-        }
-    }
-    input[type="search"],
-    input[type="email"],
-    input[type="password"],
-    textarea,
-    .input--single-line {
-        min-height: 44px;
-        border: 2px solid darken(@color-swatch1, 10%);
-    }
-    button.button {
+    .border-radius(3px);
+    .button {
         height: 44px;
         outline: none;
     }
+}
+
+legend {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: darken(@color-swatch1, 6%);
+    -webkit-border-radius: 3px 3px 0 0;
+       -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+    font-family: @font-swatch3-font-family;
+    font-size: bkscale(@font-swatch3-font-size,0.9);
+    line-height: bkscale(@font-swatch3-line-height,0.9);
+    font-weight: 700;
+    color: @font-swatch5-color;
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+.form-body {
+    padding: 20px 40px 30px;
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    min-height: 44px;
+    border: 2px solid darken(@color-swatch1, 10%);
 }
 
 select {

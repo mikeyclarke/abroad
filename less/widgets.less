@@ -417,7 +417,7 @@
 
 // Slideshow Height
 .slides-list,
-.responsiveslideshow__figure {
+.responsiveslideshow .figure {
     position: relative;
     min-height: 400px;
     @media @tablet {
@@ -432,17 +432,17 @@
 // ----------------
 
 // Use Background-image Method
-.responsiveslideshow__figure {
+.responsiveslideshow .figure {
     background-size: cover;
     background-position: center;
 }
 // Hide Img Element
-.responsiveslideshow__image { display: none; }
+.responsiveslideshow .image { display: none; }
 
 // Slideshow Image Captions
 // ------------------------
 
-.responsiveslideshow__caption {
+.responsiveslideshow .caption {
     position: absolute;
     bottom: 0;
     width: auto;
@@ -515,7 +515,7 @@
         bottom: 0;
         width: 100%;
         .button {
-            color: @font-swatch6-color;
+            color: @color-swatch1;
             padding: 0;
             outline: 0;
             -webkit-border-radius: 0;
@@ -530,9 +530,7 @@
         .next-button {
             width: 30px;
             height: 50%;
-            background-color: hsla(hue(@color-swatch1),
-                                   saturation(@color-swatch1),
-                                   lightness(@color-swatch1), 0.4);
+            background-color: transparent;
         }
         .pause-toggle {
             height: 50%;
@@ -553,21 +551,25 @@
 // --------------------
 
 .slide-pagination .pagination-list {
-    margin-top: 20px;
-    text-align: center;
     display: inline-block;
     width: 100%;
+    margin-top: 20px;
+    text-align: center;
     .pagination-item {
         margin: 0 2px;
         display: inline-block;
     }
     .button {
+        width: 8px;
+        height: 8px;
         padding: 0;
         text-indent: -9999px;
         overflow: hidden;
-        width: 8px;
-        height: 8px;
         box-shadow: none;
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+        background-color: darken(@color-swatch1, 20%);
     }
     .pagination-item.selected .button {
         background-color: @color-swatch4;

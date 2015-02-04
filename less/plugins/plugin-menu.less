@@ -8,9 +8,9 @@
 
 
 .menusections-body {
-    border-bottom: 3px solid darken(@color-swatch1, 8%);
-    text-align: center;
     padding: 0 0 2em;
+    text-align: center;
+    border-bottom: 3px solid darken(@color-swatch1, 8%);
     @media only screen and (max-width: 550px) {
         padding: 0;
     }
@@ -26,9 +26,9 @@
     display: inline-block;
     padding-right: 20px;
     @media only screen and (max-width: 550px) {
+        padding: 15px 0 10px 0;
         width: 100%;
         border-bottom: 1px solid darken(@color-swatch1,7%);
-        padding: 15px 0 10px 0;
     }
     &:last-child {
         padding-right: 0;
@@ -47,8 +47,6 @@
 }
 
 
-
-
 // Menu
 // -------------
 
@@ -57,11 +55,11 @@
     padding: 2em 0;
     text-align: center;
     .section-title {
-        background-color: darken(@color-swatch1, 3%);
-        padding: .7em 1.5em;
         display: inline-block;
-        border-bottom: 3px solid darken(@color-swatch1, 10%);
+        padding: .7em 1.5em;
         margin: .5em;
+        background-color: darken(@color-swatch1, 3%);
+        border-bottom: 3px solid darken(@color-swatch1, 10%);
     }
 }
 
@@ -74,45 +72,50 @@
 }
 
 .menu-section--subsection .section-title {
-    background-color: transparent;
-    color: @color-swatch2;
     padding: 0;
     border-bottom: 0;
+    color: @color-swatch2;
+    background-color: transparent;
 }
 
 // Item Image
 
-.item-image {
+.menu .item-image {
+    width: 100%;
+    margin: 0 auto;
     background-color: transparent;
 }
 
 // Item Price
 
 .item-price {
+    padding: 10px 0;
     font-family: @font-swatch3-font-family;
     color: @font-swatch3-color;
     font-size: @font-swatch3-font-size;
     font-weight: @font-swatch3-font-weight;
     line-height: @font-swatch3-line-height;
-    padding: 10px 0;
 }
 
 // Promoted Item
 
-.menu-item--featured {
+.menu .menu-item--featured {
+    padding: 1.5em;
     border: 1px solid darken(@color-swatch1, 10%);
     background-color: darken(@color-swatch1, 2%);
-    padding: 1.5em;
+    .item-image .image-link {
+        background-color: darken(@color-swatch1, 2%);
+    }
 }
 
 // Promoted Subsection
 
 .menu-section--featured {
+    padding: 1.5em;
     border: 1px solid darken(@color-swatch1, 10%);
     background-color: darken(@color-swatch1, 2%);
-    padding: 1.5em;
     .section-header {
-        border-bottom: 1px solid darken(@color-swatch1, 8%);
+        border-bottom: 1px solid darken(@color-swatch1, 10%);
     }
 }
 
@@ -129,6 +132,6 @@
 // Section footer
 
 .menu__section-footer {
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
