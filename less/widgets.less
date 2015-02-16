@@ -307,6 +307,9 @@
 .image-title,
 .image-description {
     color: @color-swatch1;
+    &:hover {
+        color: @color-swatch3;
+    }
 }
 
 // Image Widget
@@ -402,8 +405,9 @@
     .gallery__caption {
         padding: 10px;
     }
-    @media only screen and (min-width: 480px) {
-        .gallery__image-description {
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
             display: none;
         }
     }
@@ -421,10 +425,10 @@
             height: 200px;
         }
     }
+    // hide caption on desktop and tablet
     @media only screen and (min-width: 480px) {
         .gallery__figure:hover .gallery__caption {
             display: none;
-            padding: 10px;
         }
     }
 }
@@ -442,10 +446,10 @@
             height: 200px;
         }
     }
+    // hide caption on desktop and tablet
     @media only screen and (min-width: 480px) {
         .gallery__figure:hover .gallery__caption {
             display: none;
-            padding: 10px;
         }
     }
 }
