@@ -374,6 +374,53 @@
     }
 }
 
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 150px;
+        @media @tablet {
+            height: 107px;
+        }
+    }
+    .gallery__image-description {
+        display: none;
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 95px;
+        @media @tablet {
+            height: 69px;
+        }
+    }
+    .gallery__caption {
+        display: none;
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 69px;
+        @media @tablet {
+            height: 107px;
+        }
+    }
+    .gallery__caption {
+        display: none;
+    }
+}
+
+
+
 // Hide Img Element
 .gallery__image { display: none; }
 
