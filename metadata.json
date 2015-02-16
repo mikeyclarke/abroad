@@ -6,9 +6,13 @@
     "templateType":"standard",
     "pageTypes": ["home", "default"],
     "tags": {
-        },
+    "en": ["minimal", "clean", "bright", "multipurpose", "simple", "contemporary", "flexible", "modern", "sans-serif", "photography"],
+    "es": ["minimalista", "limpio", "claro", "multiuso", "simple", "contemporáneo", "flexible", "moderno", "sans-serif", "fotográfico"],
+    "br": ["minimalista", "limpo", "claro", "multiuso", "simples", "contemporâneo", "flexível", "moderno", "sans-serif", "fotografia"]
+    },
     "images":[
-        "images/feature-bg.jpg"
+        "images/feature-bg.jpg",
+        "images/logo.png"
     ],
     "colorSwatches":
     {
