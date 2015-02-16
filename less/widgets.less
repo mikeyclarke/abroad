@@ -307,9 +307,6 @@
 .image-title,
 .image-description {
     color: @color-swatch1;
-    &:hover {
-        color: @color-swatch3;
-    }
 }
 
 // Image Widget
@@ -384,6 +381,9 @@
         .image-description {
             font-size: bkscale(@font-swatch5-font-size, .9);
             line-height: bkscale(@font-swatch5-line-height, .9);
+            &:hover {
+                color: @color-swatch2;
+            }
         }
     }
 }
@@ -404,6 +404,12 @@
     }
     .gallery__caption {
         padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-description {
+                display: none;
+            }
+        }
     }
     // hide caption on tablet only
     @media only screen and (max-width : 768px) and (min-width : 480px) {
