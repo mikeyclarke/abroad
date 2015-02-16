@@ -388,8 +388,13 @@
             height: 200px;
         }
     }
-    .gallery__image-description {
-        display: none;
+    .gallery__caption {
+        padding: 10px;
+    }
+    @media only screen and (min-width: 480px) {
+        .gallery__image-description {
+            display: none;
+        }
     }
 }
 // Three Columns
@@ -405,8 +410,11 @@
             height: 200px;
         }
     }
-    .gallery__caption {
-        display: none;
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+            padding: 10px;
+        }
     }
 }
 // Four Columns
@@ -423,8 +431,11 @@
             height: 200px;
         }
     }
-    .gallery__caption {
-        display: none;
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+            padding: 10px;
+        }
     }
 }
 
