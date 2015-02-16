@@ -303,12 +303,6 @@
 // Image Captions
 // --------------
 
-// Gallery & Slideshow
-.image-title,
-.image-description {
-    color: @color-swatch1;
-}
-
 // Image Widget
 .imagewidget__image-title,
 .imagewidget__image-description {
@@ -542,7 +536,7 @@
     }
     .image-title,
     .image-description {
-        color: @font-swatch5-color;
+        color: @color-swatch1;
         @media @tablet {
             font-size: bkscale(@font-swatch5-font-size,0.9);
             line-height: bkscale(@font-swatch9-line-height,0.9);
@@ -639,6 +633,10 @@
 
 // Slideshow Pagination
 // --------------------
+
+.slide-pagination {
+    position: relative;
+}
 
 .slide-pagination .pagination-list {
     display: inline-block;
