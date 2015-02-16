@@ -68,7 +68,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "26px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -76,7 +76,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "24px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "34px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -84,7 +84,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "22px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -92,7 +92,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -108,7 +108,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "26px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch4",
             "letter-spacing": "inherit",
@@ -119,7 +119,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "16px",
             "font-weight": "inherit",
-            "line-height": "inherit",
+            "line-height": "26px",
             "color": "@color-swatch7",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch3",
@@ -145,7 +145,7 @@
             "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "30px",
             "font-weight": "700",
-            "line-height": "inherit",
+            "line-height": "40px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }
