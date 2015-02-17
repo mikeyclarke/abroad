@@ -382,9 +382,43 @@
 
 // Quantity Field
 
-input[type=number].quantity-field {
+.quantity-field {
     background: transparent;
-    border: 2px solid darken(@color-swatch1, 10%);
+    padding: 0 10px;
+}
+
+.quantity-wrap {
+    .button--quantity {
+        width: 22px;
+        height: 22px;
+        margin: 0;
+        line-height: 0;
+    }
+    // button rounded corners
+    .quantity-minus {
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+    }
+    .quantity-plus {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+    // increase button size for mobile
+    @media @mobile {
+        max-width: 50%;
+        .quantity-field {
+            height: 40px;
+            padding: 9px;
+
+        }
+        .button--quantity {
+            margin: 0;
+            width: 25%;
+            height: 40px;
+        }
+    }
 }
 
 // Basket Total
