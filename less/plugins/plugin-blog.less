@@ -111,6 +111,15 @@ time.timestamp.blogpost__timestamp {
     }
 }
 
+.tag-link:after {
+    // content:"\00b8";
+    content: "\002C";
+}
+
+.tag-item:last-child .tag-link:after {
+    content: "";
+}
+
 // Sharing buttons
 
 .sharing-links {
