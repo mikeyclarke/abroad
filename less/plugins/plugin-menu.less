@@ -50,6 +50,22 @@
 // Menu
 // -------------
 
+.menu-items:not(.menu-section--subsection),
+.menu-list {
+    @media only screen and (max-width: 600px) {
+        column-count: 1;
+        column-gap: 0;
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0;
+    }
+}
+
+.menu-item {
+    width: 100%;
+}
+
 .section-header {
     margin: 0 0 2em;
     padding: 2em 0;
