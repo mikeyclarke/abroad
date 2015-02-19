@@ -347,6 +347,7 @@
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-bottom: -2%;
 }
 
 // Gallery Item
@@ -598,15 +599,23 @@
     .control-text {
         display: none;
     }
+    // Same height as images
+    min-height: 400px;
+    @media @tablet {
+        min-height: 300px;
+    }
+    @media @mobile {
+        min-height: 200px;
+    }
 }
 
 // Slideshow Navigation for Tablet and Desktop
 @media only screen and (min-width:480px) {
     .slide-navigation {
         position: absolute;
-        top: 30%;
-        bottom: 0;
+        top: 0;
         width: 100%;
+        margin: 0;
         .button {
             color: @color-swatch1;
             padding: 0;
@@ -614,6 +623,12 @@
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
             border-radius: 0;
+        }
+        .button.icon:before,
+        .button.icon:after {
+            position: absolute;
+            top: 50%;
+            margin-top: -11px;
         }
         .button:hover {
             color: @font-swatch6-color-hover;
@@ -680,7 +695,7 @@
 
 // All buttons inherit #Standard button styles
 
-//  8.1  #STANDARD
+//  8.1  #Standard
 //  --------------
 
 button,
@@ -714,6 +729,13 @@ button,
             background-color: @font-swatch7-background-color-hover;
         }
     }
+}
+
+//  8.5  #Paypal
+//  ------------
+
+.paypalbuynow form {
+    margin-bottom: 0;
 }
 
 
