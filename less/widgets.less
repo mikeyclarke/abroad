@@ -149,18 +149,43 @@
     }
     .navigation-toggle:hover {
         background-color: @font-swatch6-color-hover;
-        &:after {
-            background: @color-swatch1;
-            box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
-        }
+                    &:after {
+                background: @color-swatch1;
+                box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+            }
+
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
             background-color: @font-swatch6-color-hover;
-            &:after {
+            &:before {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
                 background: @color-swatch1;
-                box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            &:after {
+                margin-top: 21px;
+                background: @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
             }
         }
     }
