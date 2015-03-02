@@ -133,47 +133,35 @@
         -moz-border-radius: 0;
         border-radius: 0;
         outline: 0;
-        .bar { // Toggle Button Closed State
-            width: 25px;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
             height: 3px;
-            margin: 0 auto 3px;
-            background-color: @font-swatch6-color-hover;
-            .transition( all, 0.5s, ease );
-        }
-        .bar.three {
-            margin-bottom: 0;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            box-shadow: 0 6px 0 @font-swatch6-color-hover, 0 12px 0 @font-swatch6-color-hover;
         }
     }
     .navigation-toggle:hover {
         background-color: @font-swatch6-color-hover;
-        .bar {
-             background-color: darken(@color-swatch1, 7%);
+        &:after {
+            background: @color-swatch1;
+            box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
         }
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
             background-color: @font-swatch6-color-hover;
-        }
-        &.bar, &.bar:hover {
-            background-color: darken(@color-swatch1, 7%);
-        }
-        &.one {
-            -webkit-transform:  rotate(45deg) translate(2px, 2px);
-            -moz-transform:  rotate(45deg) translate(2px, 2px);
-            -o-transform:  rotate(45deg) translate(2px, 2px);
-            -ms-transform:  rotate(45deg) translate(2px, 2px);
-            transform:  rotate(45deg) translate(2px, 2px);
-        }
-        &.two {
-            opacity: 0;
-        }
-        &.three {
-            -webkit-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-            -moz-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-            -o-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-            -ms-transform:  rotate(-45deg) translate(6.5px,-7.5px);
-            transform:  rotate(-45deg) translate(6.5px,-7.5px);
+            &:after {
+                background: @color-swatch1;
+                box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+            }
         }
     }
     .navigation-body {
