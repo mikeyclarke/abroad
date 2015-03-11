@@ -105,6 +105,8 @@
 // -----------------------------
 
 // Global style
+// ------------
+
 form,
 .form {
     margin-bottom: 1em;
@@ -172,3 +174,178 @@ th,
 td {
     border: 2px solid darken(@color-swatch1, 10%);
 }
+
+
+
+// Signup Form
+// Blog Search
+// Product Search
+// --------------------------------
+
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child,
+    .ecomproductslist__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .form .button {
+        &.signupform__button,
+        &.blogsearch__button,
+        &.ecomproductslist__button {
+            min-height: 44px;
+            padding: 0 18px;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+    }
+}
+
+// Ecom forms
+// --------------------------------
+
+.form {
+    &.product__form,
+    &.summary-form {
+        padding: 0;
+        margin-bottom: 0;
+        background-color: transparent;
+        legend {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// Product Filters
+
+.product-filters .form-group {
+    margin-right: 0;
+}
+
+.product-filters .form {
+    text-align: left;
+    .fieldset--search .ecomproductslist__legend {
+        display: none;
+    }
+    .legend {
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: 400;
+        background-color: @color-swatch1;
+    }
+    .form-body {
+        padding: 10px 20px;
+        background-color: darken(@color-swatch1, 3%);
+    }
+    @media @mobile {
+        .input--search {
+            margin-bottom: 20px;
+        }
+        .form-group,
+        .select,
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .ecomproductslist .fieldset--filters .form-group {
+        -ms-flex: 1 1 25%;
+        -webkit-flex: 1 1 25%;
+        flex: 1 1 25%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .select {
+            width: 100%;
+        }
+    }
+}
+
+
+// Responsive Columns
+// --------------------------------
+
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    legend {
+        padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
+    }
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist__form-body  {
+        display: block;
+        padding: 20px 30px;
+        @media @mobile {
+            padding: 20px;
+        }
+    }
+    .form .button {
+        &.signupform__button,
+        &.blogsearch__button,
+        &.ecomproductslist__button {
+            margin-left: 0;
+            .border-radius(3px);
+        }
+    }
+}
+
+
+
