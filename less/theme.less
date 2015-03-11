@@ -282,11 +282,13 @@ td {
             text-align: center;
         }
     }
-    .form-group:first-child {
-        margin-bottom: 10px;
-    }
-    .form-group:last-child {
-        margin-bottom: 0;
+    @media @mobile {
+        .form-group:first-child {
+            margin-bottom: 10px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
     }
     .form .button {
         @media only screen and (min-width : 480px) {
