@@ -4,7 +4,7 @@
     "thumbnail": "thumbnail.png",
     "screenshot": "thumbnail.png",
     "templateType":"standard",
-    "pageTypes": ["home", "default"],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["minimal", "clean", "bright", "multipurpose", "simple", "contemporary", "flexible", "modern", "sans-serif", "photography"],
     "es": ["minimalista", "limpio", "claro", "multiuso", "simple", "contemporáneo", "flexible", "moderno", "sans-serif", "fotográfico"],
