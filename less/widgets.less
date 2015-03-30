@@ -659,25 +659,27 @@ a.company-link:hover {
             -moz-border-radius: 0;
             border-radius: 0;
         }
-        .button.icon:before,
-        .button.icon:after {
-            position: absolute;
-            top: 50%;
-            margin-top: -11px;
-        }
         .button:hover {
             color: @font-swatch6-color-hover;
             background-color: transparent;
         }
         .previous-button,
-        .next-button {
+        .next-button,
+        .pause-toggle {
+            position: absolute;
+            top: 0;
             width: 30px;
-            height: 50%;
+            height: 100%;
             background-color: transparent;
         }
+        .previous-button {
+            left: 0;
+        }
+        .next-button {
+            right: 0;
+        }
         .pause-toggle {
-            height: 50%;
-            background-color: transparent;
+            right: 48%;
         }
     }
 }
