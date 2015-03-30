@@ -745,8 +745,9 @@ button,
 .button {
     padding: 9px 18px;
     .border-radius(3px);
+    .transition( all, 0.5s, ease );
+    cursor: pointer;
     &:hover {
-        .transition( all, 0.5s, ease );
     }
 }
 
@@ -754,25 +755,6 @@ button,
     margin-left: 2px;
 }
 
-// "Expand" Button in Content Widget
-
-.expand {
-    .more,
-    .less {
-        padding: 9px 18px;
-        .border-radius(3px);
-        font-family: @font-swatch7-font-family;
-        color: @font-swatch7-color;
-        font-size: @font-swatch7-font-size;
-        font-weight: @font-swatch7-font-weight;
-        line-height: @font-swatch7-line-height;
-        background-color: @font-swatch7-background-color;
-        &:hover {
-            .transition( all, 0.5s, ease );
-            background-color: @font-swatch7-background-color-hover;
-        }
-    }
-}
 
 //  8.5  #Paypal
 //  ------------
