@@ -258,17 +258,12 @@ a.company-link:hover {
     }
     .content-wrap {
         position: relative;
+        width: 100%;
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: hsla(hue(@color-swatch4),
-                               saturation(@color-swatch4),
-                               lightness(lighten(@color-swatch4,10%)),
-                               .2);
-        border: 20px solid hsla(hue(@color-swatch7),
-                                saturation(@color-swatch7),
-                                lightness(lighten(@color-swatch7,10%)),
-                                .1);
+        background-color: rgba(0,0,0,0.1);
+        border: 20px solid rgba(255,255,255,0.1);
     }
     .headline {
         font-family: @font-swatch8-font-family;
