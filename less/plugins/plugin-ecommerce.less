@@ -437,17 +437,56 @@
 // -----------------------------
 
 
-.order-total,
-.summary-item-total {
-    padding: 16px 0;
-    text-align: right;
-    @media @mobile {
-        text-align: left;
+.ecombasketsummary .summary-title {
+    padding-bottom: 35px;
+}
+
+// Table
+
+.ecombasketsummary {
+    table,
+    th,
+    td {
+        border: none;
+    }
+    .table-row {
+        border: 1px solid darken(@color-swatch1, 8%);
+        &:last-child {
+            border: none;
+        }
+    }
+    th:nth-child(4) {
+        padding: 16px 12px;
+        text-align: right;
+        @media @mobile {
+            text-align: left;
+        }
+    }
+    .summary-item-link {
+        background-image: none !important;
+    }
+    .image {
+        max-height: 100px;
     }
 }
 
-.summary-table th:nth-child(4) {
-    padding: 16px 12px;
+@media only screen and (max-width : 768px) and (min-width : 480px) {
+    .summary-table .cell--image {
+        max-width: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .summary-table .cell {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.order-total,
+.summary-item-total {
+    padding: 16px 0;
     text-align: right;
     @media @mobile {
         text-align: left;
