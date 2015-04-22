@@ -219,8 +219,7 @@ td {
     }
 
     .signupform__form-group:first-child,
-    .blogsearch__form-group:first-child,
-    .ecomproductslist__form-group:first-child {
+    .blogsearch__form-group:first-child {
         -ms-flex: 0 11 100%;
         -webkit-flex: 0 11 100%;
         flex: 0 11 100%;
@@ -229,10 +228,19 @@ td {
         align-self: auto;
     }
 
+    .ecomproductslist__form-group:first-child {
+        -ms-flex: 1 11 100%;
+        -webkit-flex: 1 11 100%;
+        flex: 1 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
     .fieldset--search .form-group:last-child {
-        -ms-flex: 1 0 auto;
-        -webkit-flex: 1 0 auto;
-        flex: 1 0 auto;
+        -ms-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
     }
 
     .form .button {
