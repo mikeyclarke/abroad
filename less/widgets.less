@@ -101,9 +101,12 @@ a.company-link:hover {
 // Folder
 
 .navigation-list--children {
-    border: 1px solid darken(@color-swatch1, 7%);
-    white-space: normal;
+    left: inherit;
+    right: 0;
     width: auto;
+    min-width: 200px;
+    white-space: normal;
+    border: 1px solid darken(@color-swatch1, 7%);
     // Padding for folder list and folder items on desktop
     @media only screen and (min-width: 769px) {
         padding: 7px 0;
