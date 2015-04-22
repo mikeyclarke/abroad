@@ -251,17 +251,22 @@ td {
         display: none;
     }
     .form-body {
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         padding: 30px 40px;
         @media @mobile {
             padding: 20px;
         }
     }
+    .form .button.blogsearch__button {
+        vertical-align: top;
+    }
     .form-group {
         margin-bottom: 0;
         vertical-align: top;
-        input {
-            margin-bottom: 0;
-        }
     }
     @media @mobile {
         .form-group .input {
