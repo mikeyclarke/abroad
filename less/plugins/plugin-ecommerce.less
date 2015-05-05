@@ -249,10 +249,12 @@
 .listing-footer {
     display: inline-block;
     margin: 3em 0;
-    padding-top: 1em;
     width: 100%;
     clear: both;
-    border-top: 1px solid darken(@color-swatch1, 8%);
+    .listing-pagination {
+        padding-top: 20px;
+        border-top: 1px solid darken(@color-swatch1, 8%);
+    }
 }
 
 .ecomproductslist .pagination-item {
@@ -498,3 +500,11 @@
     font-weight: 700;
     color: @color-swatch4;
 }
+
+// Your basket is empty message
+
+.ecombasketsummary .message {
+    padding-bottom: 35px;
+}
+
+
